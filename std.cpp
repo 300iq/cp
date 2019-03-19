@@ -18,22 +18,23 @@
 #include <bitset>
 #include <sstream>
 #include <chrono>
+#include <cstring>
 
 using namespace std;
 
 typedef long long ll;
 
 #ifdef ONPC
-    mt19937 rnd(228);
+  mt19937 rnd(228);
 #else
-    mt19937 rnd(chrono::high_resolution_clock::now().time_since_epoch().count());
+  mt19937 rnd(chrono::high_resolution_clock::now().time_since_epoch().count());
 #endif
 
 int main()
 {
 #ifdef ONPC
-    freopen("a.in", "r", stdin);
+  freopen("a.in", "r", stdin);
 #endif
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 }
