@@ -1,13 +1,13 @@
 colorscheme elflord
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 syntax on
 set cin
 set ai
 set smarttab
 set smartindent
 set expandtab
-autocmd filetype cpp nnoremap<C-b> :!g++ % -std=c++11 -O2 -DONPC -o %:r && ./%:r <CR>
+autocmd filetype cpp nnoremap<C-b> :!g++ % -std=c++11 -O2 -DONPC -Wl,-stack_size -Wl,1000000000 -o %:r && ./%:r <CR>
 autocmd filetype cpp nnoremap<C-y> :!g++ % -std=c++1z -DONPC -fsanitize=address -g -Wall -Wextra -o %:r && ./%:r <CR>
 au BufNewFile *.cpp 0r ~/.vim/sf/std.cpp
 nmap <c-s> :w<CR>
